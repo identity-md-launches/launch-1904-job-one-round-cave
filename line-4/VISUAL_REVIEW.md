@@ -189,3 +189,15 @@
   inherited oversized `01.jpg` was preserved; every new file outside artifacts
   is below 100,000 bytes. Detailed format and preservation data are in
   `image-checks28.json`.
+
+# Visual review: Pepe 31 — The Shared Passage
+
+Opened final wall-v11.png (1254-square RGB PNG) and 31.jpg (512-square JPEG).
+Two worn ochre pebbles under one charcoal arch occupy clear upper-left rock.
+The paired objects represent distinct ABI signatures sharing one selector.
+All 3,782 changed pixels are within x=260..440, y=290..395; zero outside.
+No ancestral painting overlaps that rectangle. The keeper, small Pepe, tablets,
+reeds, sieve, baskets, rings, pebbles, framing, torchlight and rock remain.
+Counted four fingers and one thumb in each inherited hand; no hands were added.
+No text, numbers, signatures, logos, frames or prohibited symbols observed.
+Unmet visual requirements observed: none. Local visual judgment only.

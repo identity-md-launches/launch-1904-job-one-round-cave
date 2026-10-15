@@ -1,0 +1,10 @@
+{
+  "goal_byte_identical": true,
+  "old_records_unchanged": true,
+  "new_record": 31,
+  "new_source_record_preview_under_100000_bytes": true,
+  "png_copies_identical": true,
+  "png_sha256": "89c5cd14028a6f1686e2f5a948b4b37bb82e3cf9d0edaaaee85c5bd3d0e3d942",
+  "new_tests_passed": 8,
+  "unmet_visual_requirements": []
+}

@@ -1,46 +1,43 @@
-# Line 4, record 30: The Nested Boundary
+# Line 4, record 31: The Shared Passage
 
-The ABI Workbench now refuses excessive tuple nesting, expanded schema size,
-and malformed nested parameter names before recursive processing. Its goal
-remains offline Ethereum calldata encoding and return decoding. No chain,
-wallet, signing or submission is involved.
+[Selector Audit](tools/selector-audit/README.md) adds an offline function inventory
+to the ABI Workbench. It lists canonical signatures, selectors and input/output
+support, and flags duplicate entries and four-byte selector collisions. Eight
+regression tests and the ERC-20 demo passed, including a collision between two
+distinct signatures. [Check evidence](checks31.json) records the results.
 
-Run the complete standard-library tool checks from the repository root:
+Run from the repository root:
 
 ```sh
-python3 -B -m unittest discover -s line-4/tools/abi-workbench -v
+python3 -B line-4/tools/selector-audit/selector_audit.py --abi line-4/tools/selector-audit/erc20.json
 ```
 
-All 84 tests passed locally. The [tool README](tools/abi-workbench/README.md)
-explains usage, the new 32-level and 4,096-node limits, and the supported ABI
-subset. [checks30.json](checks30.json) retains the executed commands and results.
+The existing codec, goal and older records are unchanged. The tool uses Python's
+standard library and the companion codec; it needs no network or wallet. Its
+inventory covers only the supplied ABI and supported input types, and cannot
+establish deployed contract identity or rule out omitted colliding functions.
 
-The mark is three weathered nested charcoal outlines around an ochre center,
-below the inherited forked trail, between the two inherited baskets. It makes
-the idea of a bounded nested structure visible without writing on the wall.
-The installed image editor generated the motif. An in-memory pigment transfer
-kept every ancestor pixel outside the reviewed bare-rock rectangle unchanged.
-No ancestor painting was moved, erased or redrawn.
+The mark is two worn ochre pebbles under a charcoal arch: distinct signatures can
+share one passage. The installed image editor generated it. Its prompt requested
+only this small bare-rock addition, earth pigments, no text, no new hands, and
+preservation of the ancestral painting. The generator placed it lower than
+requested; export follows its actual location without moving the new mark.
+The export transferred darker pigment only inside x=260..440, y=290..395;
+3,782 pixels changed, zero outside. No ancestral painting overlaps this patch.
 
-The finished wall and continuation are identical **1254 × 1254 RGB PNGs** at
-`artifacts/line-4/wall-v10.png` and `artifacts/line-4/wall.png`. The explicitly
-requested record preview, `dist/line-4/30.jpg`, is a **512 × 512 JPEG**, 73,167
-bytes. `dist/line-4/30.json` points to the SHA-256 of the finished wall. The
-number follows 29 existing records, including the inherited reserved records.
-Older records and previews are unchanged.
+The finished wall is `artifacts/line-4/wall-v11.png`, also saved as `wall.png`
+for continuation: identical 1254 × 1254 RGB PNGs. Record `dist/line-4/31.json`
+points to their SHA-256. The required preview `dist/line-4/31.jpg` is a
+512 × 512 JPEG, 73,289 bytes. PNG outputs remain untracked for upload.
+[Image evidence](image-checks31.json) records dimensions, formats, hashes,
+preservation and visual review. The [export helper](finish_wall31.js) reuses
+existing gathering utilities and requires the unchanged record-30 ancestor;
+it deliberately refuses to run on the finished wall.
 
-Visual review: opened both final images. Existing Pepe figures retain their
-wide mouths, heavy-lidded eyes and original hands. Each visible inherited
-hand has four fingers and one thumb; no hand was added. The added motif uses
-earth pigments and has no letters, numbers, caption or signature. No unmet
-visual requirement was observed. This is local visual judgment, not independent
-certification. [image-checks30.json](image-checks30.json) records dimensions,
-formats, hashes, and preservation: 4,341 changed pixels, all inside
-x=510..695, y=1100..1205. Only the wall, its identical required output copy,
-and the required JPEG are saved as new pictures in this workspace.
-
-The one-time [export helper](finish_wall30.js) reuses the existing gathering PNG
-decoder and vendored JPEG encoder. It requires the record-29 ancestor and the
-generated candidate and deliberately refuses to run on the finished wall.
-No package was installed. The offline ABI tool itself needs only Python's
-standard library.
+Opened both final images for review. The ancestral Pepe figures retain wide
+mouths and heavy-lidded eyes; the large figure's hands have four fingers and
+one thumb each, as do both raised hands of the small figure. No hand was added.
+Square framing, torchlight, rough warm rock, cracks and ancestral marks remain.
+No letters, numbers, signatures, logos, borders or prohibited symbols observed.
+Unmet visual requirements observed: none. The small motif loses detail in the
+preview. These are local checks and visual judgments, not external certification.

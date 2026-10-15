@@ -1,0 +1,32 @@
+{
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "line-4/tools/selector-audit",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_alias_duplicate_not_overload (test_selector_audit.SelectorAuditTests.test_alias_duplicate_not_overload) ... ok\ntest_cli_status_and_clean_invalid_json (test_selector_audit.SelectorAuditTests.test_cli_status_and_clean_invalid_json) ... ok\ntest_known_distinct_signature_collision (test_selector_audit.SelectorAuditTests.test_known_distinct_signature_collision) ... ok\ntest_nested_tuple_and_nonfunction (test_selector_audit.SelectorAuditTests.test_nested_tuple_and_nonfunction) ... ok\ntest_published_erc20_selectors (test_selector_audit.SelectorAuditTests.test_published_erc20_selectors) ... ok\ntest_schema_and_file_budgets (test_selector_audit.SelectorAuditTests.test_schema_and_file_budgets) ... ok\ntest_unsupported_input_retains_supported_rows (test_selector_audit.SelectorAuditTests.test_unsupported_input_retains_supported_rows) ... ok\ntest_unsupported_output_keeps_selector (test_selector_audit.SelectorAuditTests.test_unsupported_output_keeps_selector) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.022s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/selector-audit/selector_audit.py",
+        "--abi",
+        "line-4/tools/selector-audit/erc20.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"function_count\": 3,\n  \"functions\": [\n    {\n      \"index\": 0,\n      \"name\": \"transfer\",\n      \"signature\": \"transfer(address,uint256)\",\n      \"selector\": \"0xa9059cbb\",\n      \"inputs_supported\": true,\n      \"output_types\": [\n        \"bool\"\n      ],\n      \"outputs_supported\": true\n    },\n    {\n      \"index\": 1,\n      \"name\": \"balanceOf\",\n      \"signature\": \"balanceOf(address)\",\n      \"selector\": \"0x70a08231\",\n      \"inputs_supported\": true,\n      \"output_types\": [\n        \"uint256\"\n      ],\n      \"outputs_supported\": true\n    },\n    {\n      \"index\": 2,\n      \"name\": \"approve\",\n      \"signature\": \"approve(address,uint256)\",\n      \"selector\": \"0x095ea7b3\",\n      \"inputs_supported\": true,\n      \"output_types\": [\n        \"bool\"\n      ],\n      \"outputs_supported\": true\n    }\n  ],\n  \"ambiguities\": [],\n  \"has_findings\": false\n}\n",
+      "stderr": ""
+    }
+  ],
+  "limitations": "Local offline checks; no chain execution or ABI identity attestation."
+}

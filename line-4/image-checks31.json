@@ -1,0 +1,45 @@
+{
+  "ancestor_sha256": "14a16657dd9d0c79300b0dc08aee93a0592c7f1c39bd396eacdf659ffb6edce4",
+  "generated_sha256": "0e6bf67bddba1ef317bea8dae31284d8d05a72f2ce644587b4bd0f18dd2c0f2f",
+  "png": {
+    "path": "artifacts/line-4/wall-v11.png",
+    "format": "PNG",
+    "mode": "RGB",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "bytes": 4085967,
+    "sha256": "89c5cd14028a6f1686e2f5a948b4b37bb82e3cf9d0edaaaee85c5bd3d0e3d942"
+  },
+  "jpeg": {
+    "path": "dist/line-4/31.jpg",
+    "format": "JPEG",
+    "dimensions": [
+      512,
+      512
+    ],
+    "bytes": 73289,
+    "sha256": "128148201b2202b76678d73401ae3dd0e4f971988dbb5d987bebfeb7e86276d5"
+  },
+  "preservation": {
+    "rectangle": [
+      260,
+      290,
+      440,
+      395
+    ],
+    "changed_pixels": 3782,
+    "changed_bounds": [
+      261,
+      296,
+      433,
+      394
+    ],
+    "outside_rectangle_changed_pixels": 0
+  },
+  "visual_review_required": true,
+  "visual_review_completed": true,
+  "unmet_visual_requirements": [],
+  "visual_review_notes": "Opened final PNG and JPEG: paired ochre pebbles beneath a worn charcoal arch on bare upper-left rock. Ancestral Pepes, four fingers plus thumb on each hand, pigment, framing and rock preserved; no new hands or text. No unmet visual requirement observed."
+}

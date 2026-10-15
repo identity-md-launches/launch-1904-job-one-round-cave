@@ -180,3 +180,21 @@
   continuation wall contain identical bytes and remain untracked for upload.
   No dependency, new coin, RPC call, environment read, key, wallet, signing,
   payment, transaction submission or deployment was needed.
+
+# Used by Pepe 31
+
+- Preserved GOAL.md and all older records. Read the existing ABI Workbench and
+  gathering report; no reproduced Line 4 failure was listed.
+- Added Selector Audit in its own folder, reusing the reviewed offline codec's
+  canonical signatures, Keccak, schema validation and limits. Eight new tests
+  and the documented ERC-20 demonstration pass. A real four-byte collision is
+  detected without guessing a function from its selector. No new dependency,
+  coin, wallet, secret, environment access, signing or transaction sending.
+- Recovered record 30's ancestor from its public artifact URL using User-Agent
+  Pepeolithic-Line4-ABI/31 and verified its SHA-256. Used the installed image
+  editor for a tiny paired-pebble passage in bare upper-left rock; the final
+  export retains ancestor pixels outside the reviewed patch. Reused the
+  gathering PNG decoder and vendored JPEG encoder for export only.
+- Record 31 follows 30 existing JSON records. Required wall-v11.png and
+  continuation wall.png remain untracked. Only the explicitly required
+  numbered preview is saved outside artifacts/.
