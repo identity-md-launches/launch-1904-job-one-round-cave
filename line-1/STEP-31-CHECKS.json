@@ -1,0 +1,52 @@
+{
+  "step": 31,
+  "python": "3.12.3",
+  "tests": {
+    "command": "python3 -B -m unittest discover -s line-1/tools/endpoint-doctor -v",
+    "passed": 19,
+    "output": "test_body_refusal_still_explains_captured_headers (test_endpoint_doctor.DoctorTests.test_body_refusal_still_explains_captured_headers) ... ok\ntest_duplicate_json_and_oversize_input_refused (test_endpoint_doctor.DoctorTests.test_duplicate_json_and_oversize_input_refused) ... ok\ntest_endpoint_extra_probe_field_cannot_override_evidence (test_endpoint_doctor.DoctorTests.test_endpoint_extra_probe_field_cannot_override_evidence) ... ok\ntest_gate_exit_status_health_and_incomplete_are_independent (test_endpoint_doctor.DoctorTests.test_gate_exit_status_health_and_incomplete_are_independent) ... ok\ntest_input_outside_workspace_rejected_before_open (test_endpoint_doctor.DoctorTests.test_input_outside_workspace_rejected_before_open) ... ok\ntest_invalid_live_time_and_budget_refused_before_network (test_endpoint_doctor.DoctorTests.test_invalid_live_time_and_budget_refused_before_network) ... ok\ntest_invalid_supplement_does_not_discard_good_triage (test_endpoint_doctor.DoctorTests.test_invalid_supplement_does_not_discard_good_triage) ... ok\ntest_isolated_subprocess_demo (test_endpoint_doctor.DoctorTests.test_isolated_subprocess_demo) ... ok\ntest_later_time_ages_real_cache_without_changing_http_health (test_endpoint_doctor.DoctorTests.test_later_time_ages_real_cache_without_changing_http_health) ... ok\ntest_live_constructs_bounded_get_with_no_redirects_or_retries (test_endpoint_doctor.DoctorTests.test_live_constructs_bounded_get_with_no_redirects_or_retries) ... ok\ntest_missing_legacy_headers_are_visible_not_invented (test_endpoint_doctor.DoctorTests.test_missing_legacy_headers_are_visible_not_invented) ... ok\ntest_offline_cli_does_not_call_live_and_json_reproduces_source (test_endpoint_doctor.DoctorTests.test_offline_cli_does_not_call_live_and_json_reproduces_source) ... ok\ntest_offline_live_flags_are_refused (test_endpoint_doctor.DoctorTests.test_offline_live_flags_are_refused) ... ok\ntest_real_offline_lenses_agree_and_keep_source (test_endpoint_doctor.DoctorTests.test_real_offline_lenses_agree_and_keep_source) ... ok\ntest_synthetic_429_combines_triage_and_retry_without_wait (test_endpoint_doctor.DoctorTests.test_synthetic_429_combines_triage_and_retry_without_wait) ... ok\ntest_terminal_strings_are_escaped (test_endpoint_doctor.DoctorTests.test_terminal_strings_are_escaped) ... ok\ntest_unknown_retry_value_is_available_but_not_a_health_pass (test_endpoint_doctor.DoctorTests.test_unknown_retry_value_is_available_but_not_a_health_pass) ... ok\ntest_watchdog_failure_keeps_unknown_stage_and_no_fake_lenses (test_endpoint_doctor.DoctorTests.test_watchdog_failure_keeps_unknown_stage_and_no_fake_lenses) ... ok\ntest_wrapper_contradiction_is_invalid (test_endpoint_doctor.DoctorTests.test_wrapper_contradiction_is_invalid) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.226s\n\nOK\n"
+  },
+  "offline_demo": {
+    "command": [
+      "python3",
+      "-B",
+      "line-1/tools/endpoint-doctor/endpoint_doctor.py",
+      "--report",
+      "line-1/tools/endpoint-doctor/observed-live.json",
+      "--format",
+      "json"
+    ],
+    "exit_status": 0,
+    "reproduces_retained_analysis": true
+  },
+  "goal_byte_identical": true,
+  "older_json_records_byte_identical": 30,
+  "record_schema_checked": true,
+  "pngs_byte_identical": true,
+  "png_sha256": "d9a04c1ad89a641668b5e163f0748f2bf6d05c2a6fb8d2c588758a3b47079cb3",
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "new_and_changed_source_paths": [
+    "dist/line-1/31.jpg",
+    "dist/line-1/31.json",
+    "line-1/README.md",
+    "line-1/STEP-31-IMAGES.json",
+    "line-1/STEP-31-REVIEW.md",
+    "line-1/USED.md",
+    "line-1/tools/endpoint-doctor/README.md",
+    "line-1/tools/endpoint-doctor/endpoint_doctor.py",
+    "line-1/tools/endpoint-doctor/observed-analysis.json",
+    "line-1/tools/endpoint-doctor/observed-live.json",
+    "line-1/tools/endpoint-doctor/test_endpoint_doctor.py"
+  ],
+  "scope_check_passed": true,
+  "new_files_outside_artifacts_below_100000_bytes": true,
+  "named_png_outputs_untracked": true,
+  "unmet_visual_requirements": [],
+  "visual_limitations": [
+    "Inherited simplified hand shapes do not expose individually countable digits.",
+    "Small pebble detail is less distinct at 512px."
+  ]
+}

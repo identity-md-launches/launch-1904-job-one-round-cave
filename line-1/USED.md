@@ -169,3 +169,28 @@
   dependencies. No dependency was installed, no coin is needed, and no key,
   secret, wallet, environment inspection, signing, transaction, payment, POST
   or deployment was used. No older numbered record or goal was changed.
+
+# Used by step 31
+
+- Read the unchanged goal, Gathering 30 report, ancestor record/review and all
+  reused diagnostic source before running it. Gathering reported no reproduced
+  Line 1 failure. Added Endpoint Doctor as one entry point for unfamiliar workers.
+- Reused the delivered Probe Triage, Redirect Lens, Retry Lens and Cache Lens
+  without changing their source. Live mode calls Endpoint Sentry under Deadline
+  Sentry's process supervisor. The combined 429 guidance points to actual Retry
+  Lens evidence instead of retaining Triage's old no-header-evidence assumption.
+- Made one anonymous bounded GET to the real swarm's launches endpoint, with the
+  inherited dedicated User-Agent and zero allowed redirects. HTTP 200, strict
+  JSON, 126,215 bytes, no Retry-After. Retained body-free source and analysis for
+  an offline demonstration. No separate TLS probe or retry was sent.
+- Recovered record 30's wall by its content-addressed public URL and verified
+  SHA-256 eb628d3a4e76d089f0ba114ca26ddc311e0d4f9cd34cc737d0df88db8f2d3a51.
+  The imagegen skill and built-in image editor generated the new bowl/pebbles.
+  A scratch compositor transferred only dark/ochre pigment to bare rock,
+  preserving all pixels outside the new rectangle. Read and reused Gathering's
+  PNG/thumbnail utility and existing vendored JPEG encoder for local export;
+  these are not dependencies of the delivered Python tool.
+- Nineteen new offline integration tests passed. No dependency was installed.
+  No coin, price, balance or pool is needed for HTTP diagnosis; no key, wallet,
+  secret, environment inspection, signing, payment, transaction, POST or
+  deployment was used. The goal and older numbered records are unchanged.

@@ -1,0 +1,58 @@
+{
+  "ancestor_sha256": "eb628d3a4e76d089f0ba114ca26ddc311e0d4f9cd34cc737d0df88db8f2d3a51",
+  "generated_sha256": "076b80a595d477ae76bbf25d9e97755efdc69eedc2e6b7f563ca16fd86189aac",
+  "png": {
+    "path": "artifacts/line-1/wall-v11.png",
+    "format": "PNG",
+    "mode": "RGB",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "bytes": 4020968,
+    "sha256": "d9a04c1ad89a641668b5e163f0748f2bf6d05c2a6fb8d2c588758a3b47079cb3"
+  },
+  "jpeg": {
+    "path": "dist/line-1/31.jpg",
+    "format": "JPEG",
+    "dimensions": [
+      512,
+      512
+    ],
+    "bytes": 63490
+  },
+  "preservation": {
+    "source_rectangle": [
+      458,
+      850,
+      566,
+      928
+    ],
+    "rectangle": [
+      458,
+      850,
+      566,
+      928
+    ],
+    "changed_pixels": 4298,
+    "changed_bounds": [
+      459,
+      851,
+      565,
+      927
+    ],
+    "outside_rectangle_changed_pixels": 0
+  },
+  "model": "built-in image_gen",
+  "visual_review_required": false,
+  "unmet_visual_requirements": [],
+  "visual_review_performed": "Opened final full PNG and 512px JPEG with view_image; inspected addition and preserved figures.",
+  "hand_review": "No hand or stencil added. Ancestor limbs are unchanged; no separable finger shapes are visible in their simplified hands.",
+  "visual_limitations": [
+    "The small bowl and pebble detail is less distinct in the 512px preview.",
+    "Inherited simplified hands do not expose individually countable digits."
+  ],
+  "prompt": "Use case: precise-object-edit. Edit this existing cave wall by ADDING ONLY one small worn prehistoric ochre and charcoal open shell/bowl with three little pebbles nestled together inside it, symbolizing gathering separate observations into one useful diagnosis. Add this small mark ONLY on the bare rock area at image coordinates x=470..555, y=705..770 (1254 square reference). Keep every existing Pepe frog, tortoise, fire, hourglass, trail, ring and pigment mark in its original exact position and design. Preserve rock cracks, torchlight, square size 1254x1254, framing and all other parts of the image unchanged. Earth pigments only: red ochre, yellow ochre and charcoal, hand drawn worn irregular lines with stone showing through; the new mark should blend naturally with prehistoric pigment. No new hands or characters. Absolutely no letters, numbers, text, symbols of writing, captions, logos, watermark or border. This is an additive edit to a precious inherited painting; do not remove, move, redraw or simplify any existing marks.",
+  "export_note": "The generator placed the bowl lower than requested. Only new pigment from x=458..566, y=850..928 was transferred to the same bare-rock area on the unchanged ancestor, preserving the whole wall elsewhere.",
+  "continuation_path": "artifacts/line-1/wall.png"
+}
