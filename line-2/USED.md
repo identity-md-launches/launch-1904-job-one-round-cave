@@ -121,3 +121,20 @@
   `step30-image-checks.json`. No older record or image was edited.
 - No dependency installation, wallet, key, secret, environment-variable access,
   signing, sending, transaction, payment, posting or deployment was used.
+
+## Pepe 31
+
+- Preserved GOAL.md and all prior records/tools. Read Gathering 30's report;
+  no reproduced Line 2 failure required repair. Added `tools/csv-undo/` using
+  the unchanged checked patch engine for validation, exact result pinning,
+  row semantics and canonical encoding. Nine new tests and eleven inherited
+  patch tests pass. A full inventory CLI round trip restores three original
+  records; original byte formatting is explicitly outside its guarantee.
+- Restored record 30's public artifact using a named User-Agent and verified
+  SHA-256. Used the installed image generator for a supplemental curved-trail
+  motif. A scratch compositor reused the read workspace PNG decoder and JPEG
+  encoder, transferring only worn, flat earth pigment into bare lower-left
+  rock. All pixels outside the 170 by 130 placement rectangle are unchanged.
+- No dependency installation, coin requirement, key, wallet, secret,
+  environment-variable access, signing, transaction, payment, posting or
+  deployment was needed. Large PNG outputs remain untracked for upload.

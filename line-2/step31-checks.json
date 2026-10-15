@@ -1,0 +1,10 @@
+{
+  "new_undo_tests": 9,
+  "existing_patch_tests": 11,
+  "passed": 20,
+  "inventory_cli_roundtrip": "restored all three keyed records",
+  "goal_unchanged": true,
+  "previous_records_unchanged": true,
+  "dependencies": "Python standard library and unchanged sibling csv-patch",
+  "visual_review": "STEP31_VISUAL_REVIEW.md"
+}
