@@ -1,25 +1,47 @@
-# Gathering 30 — The Measured Crossing
+# Gathering 31 — The Way Back
 
-Checked all four lines and joined Line 2's change policy to Line 3's import snapshots. [Import Change Gate](../shared/import-drift/CHANGE_GATE.md) retains every difference while checking explicit row/column allowances.
+Checked all four lines and connected Line 2's checked CSV undo to Line 3's saved
+import snapshots. [Import Snapshot Undo](../shared/import-drift/UNDO.md) emits a
+reviewable reverse patch pinned to the exact forward-result bytes.
 
 ```sh
-python3 -B shared/import-drift/import_gate.py shared/import-drift/observed-sentry.csv shared/import-drift/observed-sentry23.csv --max-changed 1 --allow-change external_imports
+python3 -B shared/import-drift/import_undo.py shared/import-drift/observed-sentry.csv shared/import-drift/observed-patch26.json
 ```
 
-Observed: accepted, one changed test module, exit 0; the files remain different. Without allowances it rejects the change. [REPORT.md](REPORT.md) covers each line's results, limitations and scope. [COINS.md](COINS.md) says none.
+Observed: exit 0, one reverse operation; applying it to the exact forward result
+restores the original keyed values. Later byte changes are refused. It does not
+restore original CSV formatting or edit Python source. Python 3.10+ standard
+library only; tested with 3.12.3. No installation, network or account needed.
 
-Reproduce offline from the repository root (Python 3.10+, observed 3.12.3):
+Reproduce the checks offline from the repository root:
 
 ```sh
 python3 -B gathering/run_checks.py
 python3 -B gathering/try_tools.py
+python3 -B gathering/try_new_tools.py
 python3 -B gathering/check_delivery.py
 ```
 
-360 line tests, 73 shared tests, eight gathering checks and 77 demonstrations pass. Suites run from verified scratch copies to preserve line folders. Four fresh public HTTP/TLS invocations passed; Retry Lens found no Retry-After header in this response. Evidence is in `live-probes30.json`. These checks carry no independent authority.
+406 line tests, 79 shared tests, eight gathering checks and 96 demonstrations
+pass. Line tests run from identical scratch copies to preserve every line file.
+Fresh public Doctor, Burst and TLS checks also pass. [REPORT.md](REPORT.md)
+details each line's results and limits; [COINS.md](COINS.md) says none.
 
-The [gallery](../dist/index.html) contains 150 records and 50 embedded painting previews in one 79,061-byte page. Rebuild offline with `python3 -B gathering/build_gallery.py`; Node and the already vendored JPEG codec are used only for previews. Missing previews come from committed adjacent JPEGs, requiring no network or artifact mounts.
+[Gallery](../dist/index.html): 155 records and 55 embedded painting previews,
+86,300 bytes. Rebuild with `python3 -B gathering/build_gallery.py`; Node and the
+already vendored JPEG codec handle previews entirely offline. Worker tools
+need only Python's standard library.
 
-Required `artifacts/gathering/wall-v10.png` and continuation `wall.png` are identical **1254 × 1254 RGB PNGs**. Record: `dist/gathering/30.json`; preview: **512 × 512 JPEG**, 67,366 bytes. The new mark is a worn ochre pebble trail between charcoal uprights on lower-left bare rock. Exactly 2,696 pixels changed, all inside the reviewed patch. Both inherited hands have five digits; none was added. [Visual review](VISUAL_REVIEW.md) found no unmet requirement; the small mark loses detail in gallery miniatures.
+Output: `artifacts/gathering/wall-v11.png`, also `wall.png`, 1254 × 1254 RGB PNG.
+Record: `dist/gathering/31.json`; preview: `31.jpg`, 512 × 512 JPEG. Built-in
+imagegen added a worn return-path motif on bare upper-left rock. Preservation
+export changed 1,144 pixels, none outside the reviewed rectangle. Both inherited
+five-digit hands remain unchanged. No unmet visual requirement was observed;
+the new pigment is deliberately faint in small previews. See
+[image evidence](image-checks31.json) and [visual review](VISUAL_REVIEW.md).
 
-`finish_wall30.js` is a one-time preservation export requiring the ancestor and generated candidate, not a routine rebuild. `image-checks30.json` records formats, dimensions, hashes and bounds. PNGs stay untracked for the uploader. All line folders/records and configuration are unchanged. No dependency was installed. Nothing was signed, paid, submitted or deployed.
+`finish_wall31.js` is a one-time export requiring the exact ancestor and generated
+candidate, not an idempotent rebuild of the already finished image. The prompt
+is recorded in [IMAGE_PROMPT.md](IMAGE_PROMPT.md). PNGs remain untracked for the
+uploader. No line source, record, goal or configuration changed. Nothing was
+signed, sent, paid or deployed. Local checks are not independent certification.

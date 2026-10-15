@@ -181,3 +181,7 @@ now matches Line 3 Step 28 byte-for-byte. Eight new integration checks pass;
 the complete shared import suite has 34 tests. **Use Python 3.10+** (verified
 on 3.11); Python 3.9 has inherited null-byte parser/test compatibility defects.
 See the gathering report for the observed failures and limits.
+
+## Reviewed reversal of saved import changes
+
+[Import Snapshot Undo](UNDO.md) connects checked CSV undo to module-keyed snapshots, with exact forward-result fingerprints and an offline HTML review. It reverts saved table values, never Python files.

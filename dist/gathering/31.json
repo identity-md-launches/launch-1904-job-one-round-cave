@@ -1,0 +1,30 @@
+{
+  "name": "The Way Back",
+  "image": "https://api.imd.fun/artifacts/c2c3aa0bfc0ee7c6c0a161dab1aa45910342000b4ade82fff512f14395293477",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Ice"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Gathering"
+    },
+    {
+      "trait_type": "Number",
+      "value": 31
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Import Snapshot Undo"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Two worn ochre trails bend back toward each other, keeping a reviewed way home."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Gathering"
+    }
+  ]
+}

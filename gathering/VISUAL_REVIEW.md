@@ -1,12 +1,17 @@
-# Gathering 30 visual review
+# Gathering 31 visual review
 
-Opened the verified record-29 ancestor, generated candidate, and both final images after the preservation export.
+Opened the final required PNG and the final 512-pixel JPEG after preservation
+export. The PNG is 1254 × 1254 RGB; the JPEG is 512 × 512. Their format/dimension
+checks and hashes are in image-checks31.json.
 
-- Wall: **1254 × 1254 RGB PNG**; record preview: **512 × 512 JPEG**, 67,366 bytes. Required `wall-v10.png` and continuation `wall.png` have identical bytes.
-- Pepe remains the main figure, with wide mouth and large heavy-lidded eyes. Counted both inherited hands: each has **four fingers and one thumb**. Neither changed. No hand, handprint or stencil was added.
-- The mark is a small worn passage of red/yellow ochre pebbles between charcoal uprights on lower-left bare rock, beneath the rear foot and left of the old bowl. Uneven pigment exposes the original stone grain.
-- Ancestor marks, cracks, light, rock, framing and size remain. Exact comparison found **2,696 changed pixels**, all inside x=260..435, y=980..1070; **zero changed pixels outside**. The rectangle was visually checked against the ancestor as unused rock.
-- No letters, numbers, captions, signatures, logos, watermarks, borders or frames were added. No people, political or hateful symbols appear.
-- **Unmet visual requirements observed: none.** The new motif is deliberately subtle and weathered; low-resolution gallery previews lose its detail.
+Pepe's inherited wide mouth and heavy-lidded eyes remain visible. Counted each
+of the two visible hands: four fingers and one thumb, five digits each. No hand
+or stencil was added. The new motif comprises two curved worn ochre pebble
+trails on bare upper-left rock. No letters, numbers, captions, signatures,
+logos, watermarks or added border observed. The inherited cave framing, light,
+cracks and all paintings outside the patch are pixel-identical to record 30.
+The patch is bare rock above earlier pigment and avoids ancestor marks.
 
-This is local visual judgment, not independent certification. Structural PNG/JPEG checks and hashes are recorded separately in image-checks30.json and checked by gathering/check_delivery.py.
+No unmet requirement observed. Limitation: the deliberately worn, small mark
+is faint in the JPEG and loses detail in 48-pixel gallery miniatures. This is a
+local visual judgment, not independent approval.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check round 30 record/image/gallery structure offline, not visual fidelity."""
+"""Check round 31 record/image/gallery structure offline, not visual fidelity."""
 import hashlib
 from html.parser import HTMLParser
 import json
@@ -61,21 +61,21 @@ def jpeg_dimensions(raw):
 
 
 def main():
-    wall = Path('artifacts/gathering/wall-v10.png').read_bytes()
+    wall = Path('artifacts/gathering/wall-v11.png').read_bytes()
     assert wall == Path('artifacts/gathering/wall.png').read_bytes()
     assert png_dimensions(wall) == (1254, 1254)
-    jpeg = Path('dist/gathering/30.jpg').read_bytes()
+    jpeg = Path('dist/gathering/31.jpg').read_bytes()
     assert jpeg_dimensions(jpeg) == (512, 512)
     assert len(jpeg) < 100000
     digest = hashlib.sha256(wall).hexdigest()
-    record = json.loads(Path('dist/gathering/30.json').read_text())
+    record = json.loads(Path('dist/gathering/31.json').read_text())
     assert set(record) == {'name', 'image', 'attributes'}
     assert record['image'] == 'https://api.imd.fun/artifacts/' + digest
     attrs = {a['trait_type']: a['value'] for a in record['attributes']}
     assert len(attrs) == len(record['attributes']) == 6
     assert set(attrs) == {'Cave', 'Wall', 'Number', 'Left behind', 'Meaning', 'One thing'}
     assert attrs['Cave'] == 'Ice' and attrs['Wall'] == 'Gathering'
-    assert type(attrs['Number']) is int and attrs['Number'] == 30
+    assert type(attrs['Number']) is int and attrs['Number'] == 31
     assert attrs['One thing'] == 'Gathering'
     assert json.loads(Path('dist/goals.json').read_text()) == [
         {'line': n, 'goal': Path(f'line-{n}/GOAL.md').read_text().strip()} for n in range(1, 5)]
@@ -84,9 +84,9 @@ def main():
     content = Path('dist/index.html').read_text()
     gallery = Gallery(content)
     assert len(content.encode()) < 100000
-    assert len(gallery.records) == len(expected) == 150
+    assert len(gallery.records) == len(expected) == 155
     assert set(gallery.records) == expected
-    assert len(gallery.images) == 50
+    assert len(gallery.images) == 55
     assert all(re.fullmatch(r'data:image/jpeg;base64,[A-Za-z0-9+/=]+', src) for src in gallery.images)
     assert not set(gallery.tags) & {'script', 'iframe', 'link'}
     for href in gallery.links:
@@ -121,15 +121,16 @@ def main():
         "Path(__file__).resolve().parents[1] / 'csv-reconcile' / 'reconcile.py'",
         "Path(__file__).resolve().with_name('reconcile.py')")
     assert gate_source == Path('shared/import-drift/gate.py').read_text()
-    image_review = json.loads(Path('gathering/image-checks30.json').read_text())
+    image_review = json.loads(Path('gathering/image-checks31.json').read_text())
     assert image_review['png']['sha256'] == digest
     assert image_review['preservation']['outside_rectangle_changed_pixels'] == 0
     assert image_review['preservation']['changed_pixels'] > 0
     assert image_review['visual_review_completed'] is True
     assert image_review['unmet_visual_requirements'] == []
-    assert json.loads(Path('gathering/test-runs30.json').read_text())['ok']
-    assert json.loads(Path('gathering/integration-checks30.json').read_text())['ok']
-    baseline = json.loads(Path('gathering/scope-before30.json').read_text())
+    assert json.loads(Path('gathering/test-runs31.json').read_text())['ok']
+    assert json.loads(Path('gathering/integration-checks31.json').read_text())['ok']
+    assert json.loads(Path('gathering/new-tool-checks31.json').read_text())['ok']
+    baseline = json.loads(Path('gathering/scope-before31.json').read_text())
     assert all(Path(p).is_file() and hashlib.sha256(Path(p).read_bytes()).hexdigest() == digest for p, digest in baseline.items())
     actual = {p.as_posix() for n in range(1, 5) for root in (Path(f'line-{n}'), Path(f'dist/line-{n}')) for p in root.rglob('*') if p.is_file()}
     assert actual == set(baseline), 'line paths changed'
@@ -143,12 +144,12 @@ def main():
                 inherited_oversize.append({'path': path.as_posix(),
                                            'bytes': path.stat().st_size,
                                            'unchanged': True})
-    assert json.loads(Path('gathering/test-runs30.json').read_text())['gathering_tests'] == 8
-    assert json.loads(Path('gathering/test-runs30.json').read_text())['line_tests'] == 360
-    assert json.loads(Path('gathering/test-runs30.json').read_text())['shared_tests'] == 73
+    assert json.loads(Path('gathering/test-runs31.json').read_text())['gathering_tests'] == 8
+    assert json.loads(Path('gathering/test-runs31.json').read_text())['line_tests'] == 406
+    assert json.loads(Path('gathering/test-runs31.json').read_text())['shared_tests'] == 79
     print(json.dumps({'ok': True, 'png': {'dimensions': [1254, 1254], 'format': 'PNG', 'sha256': digest, 'bytes': len(wall)},
                       'jpeg': {'dimensions': [512, 512], 'bytes': len(jpeg)},
-                      'gallery_records': 150, 'painted_previews': 50, 'placeholders': 100,
+                      'gallery_records': 155, 'painted_previews': 55, 'placeholders': 100,
                       'gallery_bytes': len(content.encode()),
                       'inherited_oversize_files': inherited_oversize,
                       'visual_certification': False}, indent=2))

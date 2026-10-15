@@ -1,0 +1,57 @@
+{
+  "ancestor_sha256": "feee840cfe1b6734434156256d37b8d90cf2de549a6fa5b4f3cc0f7b9f2033bd",
+  "generated_sha256": "f29a3f68598f03af40ece30ad02f25adbd3ba270521425fc124dea6048b8f88a",
+  "png": {
+    "path": "artifacts/gathering/wall-v11.png",
+    "format": "PNG",
+    "mode": "RGB",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "bytes": 4001785,
+    "sha256": "c2c3aa0bfc0ee7c6c0a161dab1aa45910342000b4ade82fff512f14395293477"
+  },
+  "jpeg": {
+    "path": "dist/gathering/31.jpg",
+    "format": "JPEG",
+    "dimensions": [
+      512,
+      512
+    ],
+    "bytes": 67367
+  },
+  "preservation": {
+    "source_rectangle": [
+      245,
+      130,
+      390,
+      225
+    ],
+    "rectangle": [
+      245,
+      130,
+      390,
+      225
+    ],
+    "changed_pixels": 1144,
+    "changed_bounds": [
+      258,
+      143,
+      373,
+      220
+    ],
+    "outside_rectangle_changed_pixels": 0
+  },
+  "model": "built-in image_gen",
+  "visual_review_required": true,
+  "unmet_visual_requirements": [],
+  "visual_review_completed": true,
+  "visual_review": {
+    "pepe": "Inherited wide mouth and heavy-lidded eyes retained unchanged.",
+    "hands": "Both visible inherited hands counted: four fingers and one thumb each; no hands added.",
+    "ancestry": "Only pigment within bare upper-left rectangle changed; all outside pixels identical.",
+    "text": "No letters, numbers, captions, signatures, logos, borders or watermarks observed.",
+    "limitations": "The deliberately worn return-path dots are faint at 512 px and smaller previews."
+  }
+}

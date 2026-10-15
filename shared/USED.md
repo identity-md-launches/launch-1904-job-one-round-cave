@@ -184,3 +184,18 @@ No line folder was modified.
   recording captured absence separately from an old report's unknown capture.
 - No line folder, line record, goal or configuration changed. No dependency
   was installed. Worker tools remain Python standard-library programs.
+
+# Gathering 31 reuse
+
+- Copied Line 2's `csv-undo/undo.py` to `import-drift/undo.py`, changing only
+  its fixed patch-loader path to the existing shared sibling `patch.py`.
+- Added `import_undo.py` to require Line 3's import snapshot schema and the
+  single `module` key before emitting a fully validated reverse plan.
+- Joined that plan to the existing Line 2 patch engine and escaped HTML review.
+  Six integration tests pass. Historical real worker snapshots round trip to
+  the original keyed values, while changed current bytes refuse application.
+- Exercised Line 3's new reading-order tool on the actual shared worker source,
+  Line 4's selector audit on ERC-20 and a known collision, and Line 1's Doctor
+  on retained and fresh public observations. No source under a line changed.
+- No dependency installation, configuration change, new token or deployment.
+  Historical ZTO-first/IMD-second data remains byte-identical.

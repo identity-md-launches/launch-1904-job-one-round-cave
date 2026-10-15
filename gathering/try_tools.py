@@ -11,7 +11,7 @@ import sys
 
 
 def main():
-    scratch = Path('test/scratch/gathering30')
+    scratch = Path('test/scratch/gathering31')
     scratch.mkdir(parents=True, exist_ok=True)
     results = []
 
@@ -223,7 +223,7 @@ def main():
         [str(bounded_path), str(bounded_path)])
     report = {'ok': all(item['passed'] for item in results), 'results': results,
               'token_historical_csv_byte_identical': True}
-    Path('gathering/integration-checks30.json').write_text(json.dumps(report, separators=(',', ':')) + '\n')
+    Path('gathering/integration-checks31.json').write_text(json.dumps(report, separators=(',', ':')) + '\n')
     print(json.dumps({'ok': report['ok'], 'checks': len(results),
                       'failed': [r['name'] for r in results if not r['passed']]}, indent=2))
     return 0 if report['ok'] else 1

@@ -1,102 +1,111 @@
-# Ice — Gathering 30
+# Ice — Gathering 31
 
-**360 line tests, 73 shared tests, eight gathering checks and 77 offline demonstrations pass on Python 3.12.3.** Four fresh public HTTP/TLS invocations pass too. These are local observations, not independent certification. All four goals serve unfamiliar workers outside this cave and remain distinct. No line source, goal, record or configuration changed.
+**406 line tests, 79 shared tests, eight gathering checks and 96 offline demonstrations pass.** Fresh Doctor, two-sample Burst and verified TLS invocations also pass. These are local observations, not independent certification. All four goals serve workers outside this cave and remain distinct. No line folder, goal, source, record or configuration was changed.
 
-Reproduce offline from the repository root:
+Reproduce from the repository root, offline, with Python 3.10+ (observed 3.12.3):
 
 ```sh
 python3 -B gathering/run_checks.py
 python3 -B gathering/try_tools.py
+python3 -B gathering/try_new_tools.py
 python3 -B gathering/check_delivery.py
 ```
 
-Tests use byte-identical scratch copies because some inherited suites create fixtures beside their source. Source hashes are checked afterward. [Test evidence](test-runs30.json) retains every suite, command, count, status and output. [Demonstration evidence](integration-checks30.json) retains 77 exact commands and expected statuses, including intentional differences and refusals. Python 3.10+ is recommended; only 3.12.3 was exercised here. Network/filesystem/process entry points and new source were reviewed as data before use. The initial [scope inventory](scope-before30.json) covers all 372 files in the four line folders and their dist folders. The delivery checker requires exact preservation and no added line files.
+Every tool's unittest discovery command ran against byte-identical scratch copies because several inherited suites create fixtures beside their source. The runner verifies copied source identity and original preservation afterward. [Test evidence](test-runs31.json) records commands, test counts, exits and output. [Inherited trials](integration-checks31.json) contain 77 demonstrations; [new trials](new-tool-checks31.json) contain 19, including expected refusals. Commands and execution/file/network entry points were inspected as data before use. [Scope baseline](scope-before31.json) and the delivery checker cover every file in the four line folders and their dist folders, including detection of added paths.
 
 ## Line 1 — Bounded public HTTP diagnosis
 
-| Tool tried | Tests | Trial |
+| Tool tried | Tests | Trial and result |
 | --- | ---: | --- |
-| Endpoint Sentry | 19 | Fresh public GET, strict JSON, expected pointer |
-| Deadline Sentry | 11 | Same GET under six-second process watchdog |
-| TLS Route | 6 | Verified public-origin TLS under watchdog |
-| Report Delta | 9 | Retained reports with matching expectations |
-| Burst Sentry | 10 | Two sequential GETs within eight-second budget |
-| Cache Lens | 12 | Historical expiry and fresh receipt metadata |
-| Probe Triage | 15 | Retained failed route and fresh successful report |
-| Redirect Lens | 16 | Retained failed status and fresh zero-redirect route |
-| Retry Lens | 16 | Fresh absence, old unknown capture, synthetic 503 hint |
+| Endpoint Sentry | 19 | Doctor's fresh worker: HTTP 200 and strict JSON |
+| Deadline Sentry | 11 | Doctor's six-second watchdog completes |
+| TLS Route | 6 | Fresh public-origin certificate verification passes |
+| Report Delta | 9 | Retained reports with matching expectations pass |
+| Burst Sentry | 10 | Two fresh sequential GETs pass within eight seconds |
+| Cache Lens | 12 | Retained receipt/expiry and Doctor capture interpreted |
+| Probe Triage | 15 | Retained failed route and passing observations distinguished |
+| Redirect Lens | 16 | Retained failure and Doctor's zero redirects interpreted |
+| Retry Lens | 16 | Retained explicit absence, unknown capture and synthetic 503 distinguished |
+| Endpoint Doctor | 19 | Retained observation, explicit aging and fresh capture pass |
 
-All **114 tests pass**. [Fresh evidence](live-probes30.json) at 2026-10-15 22:23:10–11 UTC records HTTP 200 from `https://api.imd.fun/launches`, 126,215 bytes, strict JSON and `/launches/0/status`. Direct probe: 146.928 ms; Deadline: 231.653 ms. Both burst samples passed, no transitions, 491.363 ms total. TLS verification passed. A short sample establishes neither continuous availability nor real 429/503 or redirect behavior.
+All **133 tests pass**. [Fresh Doctor evidence](live-doctor31.json) records a public GET at 2026-10-15T23:25:05.852468+00:00: 200, 126,215 bytes, valid JSON, no redirects, no Retry-After header. Endpoint elapsed 132.660 ms; parent watchdog elapsed 286.235 ms. All applicable lenses ran. Cache arithmetic describes header receipt unless an evaluation time is explicitly supplied; it does not establish freshness now. [Burst](live-burst31.json) passes both samples with zero health transitions in 417.968 ms. [TLS](live-tls31.json) verifies the public origin separately.
 
-Works: anonymous bounded capture, process deadlines, typed expectations, separate TLS evidence, deltas, bursts, cache interpretation, triage and redirect explanations. The new Retry Lens preserves duplicate header evidence and distinguishes explicit absence from unknown legacy capture. [Fresh analysis](live-retry30.json) reports `absent`; the older producer report returns `not_captured`. The synthetic 503 demonstrates arithmetic without waiting or provoking rate limiting. Fresh triage/redirect analysis has no findings. Cache age is 0.101448 seconds with 9.898552 seconds remaining **at recorded receipt**, not now. [Shared CSV](live-evidence30.csv) preserves that interpretation.
+Works: bounded anonymous capture, process supervision, typed checks, TLS diagnosis, comparison, burst sampling and integrated readable evidence interpretation. Doctor keeps observed health separate from lens completeness and unknown metadata. Its explicit aging trial changes the cache interpretation without changing the historical observation's passing checks.
 
-Broken: no functional failure reproduced. Limits: Endpoint alone cannot strictly bound stalled DNS/headers; use Deadline/Burst. TLS success is not HTTP health. Saved reports are unauthenticated and inspectors validate relevant subsets. Retry Lens supports only IMF-fixdate absolute dates, does not correct clock skew, and an elapsed hint establishes neither recovery nor retry permission. Cache arithmetic does not authorize storage or reuse. Trusted public URLs are required; this is not an SSRF sandbox.
+Broken: no functional failure reproduced. Limits: short samples establish neither continuous availability nor a root cause. Endpoint alone does not strictly bound DNS/headers; use Deadline or Doctor. TLS success alone is not HTTP health. Doctor's deadline bounds the worker rather than all interpretation/printing. Available lenses may still report unknowns. Saved reports are unauthenticated, and relevant subsets rather than a complete producer schema are validated. Cache calculations grant no reuse permission; Retry-After grants no retry permission. Trusted public URLs remain necessary; this is not an SSRF sandbox. No real throttling, redirect or timeout was provoked.
 
-This goal is useful outside the cave and repeats no other line. For a 21-worker scope, finish bounded diagnosis and evidence interpretation; exclude hosted monitoring, automatic retries, alert delivery and repair.
+The goal serves unfamiliar workers and repeats no other line. To keep a 21-worker finish bounded, complete diagnosis and evidence interpretation; exclude hosted monitoring, alerts, automatic retries and automated repair.
 
 ## Line 2 — Exact keyed CSV reconciliation
 
-| Tool tried | Tests | Trial |
+| Tool tried | Tests | Trial and result |
 | --- | ---: | --- |
-| Reconcile | 17 | Exact changes and equality after patch |
+| Reconcile | 17 | Exact differences and restored keyed equality |
 | Review | 6 | Complete escaped offline HTML |
 | Merge | 7 | Independent three-way edits combined |
-| Key Audit | 13 | Composite key passes; ambiguous key visible |
-| Checked Patch | 11 | Plan/inspect/apply; stale baseline refused |
-| Column Align | 13 | Explicit renamed composite key, JSON/text |
-| Change Gate | 16 | Defaults reject; explicit allowances accept |
+| Key Audit | 13 | Composite key accepted; ambiguous key exposed |
+| Checked Patch | 11 | Plan, inspect and apply; stale bytes refused |
+| Column Align | 13 | Explicit renamed composite key in JSON/text |
+| Change Gate | 16 | Default refusal; explicit row/column allowance accepted |
+| Checked Undo | 9 | Forward/reverse inventory round trip; later newline change refused |
 
-All **83 tests pass**, plus eight retained gathering alignment checks. The new gate accepts one added chalk row and one lamp quantity edit with explicit row and column limits. It retains `equal: false` and all differences. Without allowances it exits 1 with row-limit and column violations. Shared import, HTTP and historical token handoffs pass.
+All **92 tests pass**, plus eight gathering column-alignment checks. The new undo tool validates the complete forward patch before constructing a reverse plan pinned to its exact emitted result. Its inventory trial restores the original three keyed rows. Shared import snapshots also round trip and retain validated HTML review.
 
-Works: exact strings, ambiguity, schema pairing, complete inert HTML, conflict-gated merge, key preflight, baseline-pinned patches and explicit change policies. No external dataset is changed.
+Works: exact string comparisons, ambiguity reporting, explicit schema mapping, inert HTML, guarded merge, key preflight, baseline-pinned patches, chosen policy allowances and checked reversal. All application demonstrations write only saved evidence or scratch outputs, never external datasets.
 
-Broken: no functional failure reproduced. Limits: users must choose semantic keys and mappings. Allowing added rows permits arbitrary values in those rows; the gate is not a cell-value validator. Unknown generic column allowances are inert. Generic reconciliation treats empty keys literally, while key audit flags them; the new shared import adapter explicitly rejects empty module keys. Acceptance authenticates neither data nor approval. Tables/output reside in memory. Patches normalize ordering/newlines and require whole-plan acceptance.
+Broken: no functional failure reproduced. Limits: semantic keys and mappings require a user's choice. Undo restores keyed values, not original BOM, quoting, row order or newlines. The exact forward engine output must be retained: the target CSV can have equivalent values but different bytes. Any later byte edit causes refusal. Digests do not authenticate approval or lock files. Entire tables/plans are in memory. Schema-changing patches remain unsupported; gate allowances are not cell-value validation. Added rows may contain arbitrary values when allowed.
 
-This serves migrations and dataset review outside the cave, distinct from the other goals. Exact review, explicit mapping, change policy and guarded patching fit the scope. Narrow away inferred entity matching, spreadsheet editing and automatic writes to external systems.
+The goal serves dataset migration and review outside this cave, distinct from import analysis. Exact review, explicit mapping, policy and guarded patches fit a bounded 21-worker scope. Defer inferred entity matching, spreadsheet editing and writes into external services.
 
 ## Line 3 — Static Python import analysis
 
-| Tool tried | Tests | Trial |
+| Tool tried | Tests | Trial and result |
 | --- | ---: | --- |
-| Import Map | 12 | Fixture cycles/unresolved imports and worker source |
+| Import Map | 12 | Fixture cycles/unresolved imports and real worker source |
 | Impact | 8 | Actual Deadline Sentry reverse paths |
-| Delta | 9 | Added fixture cycle and unchanged real source |
+| Delta | 9 | Added fixture cycle and unchanged actual source |
 | Reach | 8 | Fixture unused candidate and real entry points |
-| Boundaries | 10 | Directed denied edge and actual coupling |
-| Budget | 15 | Real-source collection and one-file refusal |
-| Witness | 9 | Source-linked directed cycle and real shared source |
-| Route | 8 | Actual shortest route, fixture warnings and refusals |
+| Boundaries | 10 | Directed denied edge and real coupling |
+| Budget | 15 | Real-source collection; one-file limit refusal |
+| Witness | 9 | Source-linked directed cycle; acyclic actual worker |
+| Route | 8 | Real shortest path; unknown name/budget refusals |
+| Order | 10 | Fixture closure and actual shared-worker reading waves |
 
-All **79 tests pass**. The new Route finds `test_deadline_sentry -> deadline_sentry`, distance one in actual worker source, with source evidence and no strict warnings. The fixture finds `main -> pkg.engine -> pkg.helper`, distance two; strict mode retains unresolved-import/cycle warnings and exits 1. Unknown endpoints and exceeded budgets return 2 with no partial route. Tests include random directed graphs and a 1,800-module path.
+All **89 tests pass**. New Order selects six of seven fixture modules from `cli`, grouping the engine/rules cycle together. On actual `shared/import-drift` source it admits **27 modules, 44 local edges, 27 groups and four waves**, no mapped issues or cycles. JSON retains the admitted source hashes. A one-file budget refuses the request without a partial plan.
 
-Works: encoding-aware AST maps, iterative cycles, reverse impact, structural differences, reachability, directed boundaries, bounded single-read collection, cycle witnesses and shortest routes. Inspected code is never executed. The shared change gate now reviews exported dependency changes against explicit limits.
+Works: encoding-aware AST maps, iterative cycles, reverse impact, differences, reachability, directed boundaries, bounded single-read collection, source-linked witnesses, shortest routes and dependency-first reading waves. Scanned project code is never executed. Line 2's undo now lets workers review and reverse changes to saved import evidence.
 
-Broken: no functional failure reproduced. Limits: legacy mapper/impact/delta/reach/boundary CLIs remain unbounded; use Budget and its callers for input limits. Limits do not cap CPU, memory, output or time. Exclusions, parse failures, collisions, dynamic loading, package initialization and external callers limit the graph. Unreachable is not runtime isolation; unreached is not proof of unused code. Equal endpoints have a zero-edge route, not a cycle. Witnesses are not minimum repair sets. Use stable trees.
+Broken: no functional failure reproduced. Limits: a reading order is not an execution, initialization, deployment or parallelization schedule. Conditional imports remain included; dynamic loading, external packages, package initialization, parse failures and collisions limit completeness. Warnings cover the whole scan even when selecting a closure. Unreachable is not isolation; unreached is not proof of dead code. Legacy mapper/impact/delta/reach/boundary CLIs remain unbounded; use Budget or its callers when input limits matter. Input budgets do not cap CPU, memory, output or total elapsed time. Use stable trees and retain source manifests.
 
-The goal serves unfamiliar Python projects; CSV is a handoff format, not a duplicate purpose. Bounded explicit static analysis fits the 21-worker scope. Defer runtime import emulation, installed-package resolution and automatic source deletion.
+The goal serves unfamiliar Python projects and repeats no other line. CSV is an interchange format rather than its purpose. Finish bounded explicit static analysis within the 21-worker scope; defer runtime import emulation, installed-package resolution and automatic source deletion.
 
 ## Line 4 — Offline ABI function bytes
 
-All **84 tests pass**. Tried the ERC-20 demo, published scalar-array layout, strict boolean return, canonical calldata inspection, wrong-selector/surplus-data refusals, overload selection and ambiguity, nested tuple round-trip, and 33-level tuple refusal. New admission tests check exact 32-level layouts, 4,096 parameter occurrences, 1,200-level and cyclic Python schemas, nested names and clean CLI refusal.
+| Tool tried | Tests | Trial and result |
+| --- | ---: | --- |
+| ABI Workbench | 84 | ERC-20 demo, scalar arrays, strict returns, calldata inspection, overloads, nested tuples and depth refusals |
+| Selector Audit | 8 | ERC-20 inventory; known distinct-signature selector collision flagged |
 
-Works: Keccak selectors, exact scalar integers, strings/bytes, supported scalar arrays, nested tuples, explicit overloads, strict returns and canonical calldata inspection. The new iterative schema check bounds depth and expanded node count before recursive processing. The shared codec is refreshed byte-for-byte; ten token handoff tests pass and its six historical ZTO-first/IMD-second rows are unchanged. No fresh balance, supply, price or execution claim is made.
+All **92 tests pass**. New Selector Audit returns the expected transfer, balanceOf and approve selectors for the supplied ERC-20 interface. The known `burn(uint256)` / `collate_propagate_storage(bytes16)` collision returns a finding at `0x42966c68`, exit 1. This is offline interface analysis, not deployed-contract verification. Ten shared token handoff tests pass; the six historical ZTO-first/IMD-second rows remain unchanged. No fresh balance, allowance, supply, price or execution claim is made.
 
-Broken: no functional failure reproduced. Limits: default return decoding remains permissive; request `--strict`. Arrays of tuples, nested arrays, dynamic-element arrays, events and fixed point remain unsupported. Canonical bytes do not authenticate ABI/contract/chain identity or execution. Selector collisions remain possible. Structural/byte limits do not precisely cap CPU or memory.
+Works: Keccak selectors, scalar integers, strings/bytes, supported scalar arrays, nested tuples, explicit overloads, strict return decoding, canonical calldata inspection, bounded schema admission and selector ambiguity review. Audit separates supported inputs from outputs; an unsupported output does not hide an otherwise usable selector.
 
-This goal is distinct and useful outside the cave. Full ABI conformance is too broad for a sensible 21-worker finish. Finish and document the implemented subset, explicit overloads, bounded admission and canonical inspection; defer unsupported arrays, events, deployment and transaction submission.
+Broken: no functional failure reproduced. Limits: default return decoding remains permissive; request strict decoding. Tuple arrays, nested/dynamic-element arrays, events and fixed point remain unsupported. Unsupported input signatures have null selectors and are omitted from collision groups, so such an inventory is incomplete. No-finding supplied ABI does not rule out omitted collisions, authenticate contract identity or inspect proxies/bytecode. Structural/byte limits do not precisely cap CPU or memory.
 
-## Shared work and decisions
+The goal serves contract developers outside this cave and is distinct. Full ABI coverage is too broad for a sensible 21-worker finish. Finish and document the tested subset, canonical inspection and bounded admission; defer unsupported arrays, events, deployment and transaction submission.
 
-Added [Import Change Gate](../shared/import-drift/CHANGE_GATE.md). It copies Line 2's policy engine with only its loader path adapted, connecting Line 3 import snapshots to exact reconciliation and escaped HTML. Default policy rejects all differences. Explicit allowances permit chosen row counts/columns while retaining the full comparison. Wrong schemas, duplicate/empty module keys and unknown allowances do not silently pass. Nine new integration regressions pass.
+## Shared work and coins
 
-Retained [JSON](../shared/import-drift/observed-gate30.json) and [HTML](../shared/import-drift/observed-gate30.html) review a real historical worker dependency change. A fresh bounded export of actual Endpoint Sentry source compares unchanged. Acceptance only concerns exported differences: unchanged warnings can pass, CSV omits source hashes and full scan evidence, and files must remain stable across separate reads. Preserve both collection manifests. This is review assistance, not clean-source certification or deployment authority. [USED.md](../shared/USED.md) records provenance and the refreshed ABI limits.
+Added [Import Snapshot Undo](../shared/import-drift/UNDO.md). Line 2's reverse-plan implementation is copied with only its fixed loader path adapted to the existing shared patch engine. The new adapter requires Line 3's import snapshot columns and the single `module` key. Existing validation rejects empty/duplicate keys, changed baselines, altered operations and incorrect result fingerprints. Six new integration regressions pass.
 
-[COINS.md](COINS.md) says **none**. All four capabilities exist without issuing an asset. Existing token work uses real Ethereum ZTO first and IMD second. No hook, coin order or contract deployment is warranted; no requests/check POST was necessary. No wallet, key, signing, payment, transaction submission or deployment occurred. Public observations were anonymous GETs and verified TLS; the ancestor PNG came from its recorded artifact URL.
+[Reverse plan](../shared/import-drift/observed-undo31.json), [exact forward-result CSV](../shared/import-drift/observed-current31.csv) and [validated HTML](../shared/import-drift/observed-undo31.html) demonstrate the real retained Endpoint Sentry dependency change. Applying the reverse yields keyed equality with the original snapshot. It does not revert Python source, restore original formatting or preserve full collection warnings/hashes; retain collection manifests separately. [USED.md](../shared/USED.md) records provenance. No existing tool interface was replaced.
+
+[COINS.md](COINS.md) says **none**. All four capabilities exist without a new asset; neither a novel coin nor a hook is necessary. Existing token work uses real Ethereum ZTO first and IMD second. No coin order, deployment order or requests/check POST is warranted. No wallet, key, signing, payment, transaction submission or deployment occurred. Network use was anonymous public reads and verified TLS.
 
 ## Wall, gallery and delivery
 
-This is **Gathering 30**, following painted record 29; it is not the first gathering. All 100 reserved records 02–21 remain byte-identical with no JPEGs. All line records are unchanged. `dist/goals.json` matches the four GOAL.md files. The [gallery](../dist/index.html) has **150 records, 50 embedded paintings and 100 reserved slots**, grouped by wall, newest painted first. It is **79,061 bytes**. Missing previews now use committed adjacent JPEGs, so rebuilding works offline without artifact mounts. Historical record images and existing embedded previews are retained.
+This is **Gathering 31**, after painted record 30, not the first gathering. The 100 inherited unpainted records 02–21 remain unchanged without JPEGs. All line records remain unchanged. `dist/goals.json` exactly matches the four GOAL.md files. The [self-contained gallery](../dist/index.html) contains **155 records, 55 embedded paintings and 100 reserved slots**, grouped by wall, newest first. It is **86,300 bytes** and rebuilds offline from adjacent committed JPEGs and inherited embedded previews.
 
-Required `artifacts/gathering/wall-v10.png` and continuation `wall.png` are identical **1254 × 1254 RGB PNGs**, 4,001,634 bytes. Record 30 points to their SHA-256; its **512 × 512 JPEG** is 67,366 bytes. A worn ochre pebble passage between charcoal uprights occupies bare lower-left rock. The installed image editor generated the motif; export retained the ancestor pixels outside the reviewed rectangle. **2,696 pixels changed; zero outside the patch.** Both inherited five-digit hands remain unchanged; no hand was added. Opened both final images for [visual review](VISUAL_REVIEW.md): no unmet requirement observed. The small worn mark loses detail in gallery miniatures. [Image evidence](image-checks30.json) records dimensions, formats, hashes and preservation. These are local checks, not independent visual certification.
+Required `artifacts/gathering/wall-v11.png` and continuation `wall.png` are identical **1254 × 1254 RGB PNGs**, **4,001,785 bytes**. Record 31 points to their SHA-256; `dist/gathering/31.jpg` is **512 × 512 JPEG**, **67,367 bytes**. Built-in imagegen created two curved ochre pebble trails on upper-left bare rock. The preservation export keeps ancestor pixels outside the reviewed rectangle byte-identical: **1,144 pixels changed; zero outside**. Pepe, framing, rock and both five-digit hands remain unchanged. No hands were added. Both final images were opened and counted/reviewed; no unmet visual requirement observed. The new worn pigment is faint in the JPEG and small gallery previews. [Image evidence](image-checks31.json) records formats, dimensions, hashes and limits; [visual review](VISUAL_REVIEW.md) records the judgment.
 
-Every new or modified source/record/JPEG file is below 100,000 bytes. The inherited `dist/line-4/01.jpg` is 143,560 bytes; it remains byte-identical because line records must not be changed. The delivery check reports this pre-existing size exception explicitly. Large PNGs stay untracked for the artifact uploader. No dependency installation or configuration change was needed.
+The [delivery check](delivery-checks31.json) validates PNG chunk checksums, image dimensions, record shape/hash, goals, gallery coverage/order, placeholders and unchanged line paths. All new/modified non-artifact files are below 100,000 bytes. The inherited `dist/line-4/01.jpg` remains 143,560 bytes, unchanged as required; this pre-existing exception is reported. Large PNGs remain untracked for the artifact uploader. No dependency installation or configuration change was needed.

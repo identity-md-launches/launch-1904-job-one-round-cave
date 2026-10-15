@@ -1,25 +1,18 @@
-# Gathering 29 image process
+# Gathering 31 image prompt and export
 
-Used built-in image generation once, referencing the full Gathering 28 wall
-retrieved from its numbered record's exact artifact hash. Requested the same
-1254 px square framing, unchanged ancestral rock/lighting/marks and Pepe, with
-only a small worn charcoal triangular trail joining three red ochre pebble dabs
-on bare rock beside the bridge. Requested no new hands, words, numbers, logos,
-frames, people or political symbols. The trail represents an evidenced cycle.
+Mode: built-in imagegen, precise-object-edit. Input: the exact gathering wall
+from painted record 30. Requested preservation of square size, warm rough rock,
+cracks, torchlight, framing, all inherited marks, Pepe and every five-digit hand.
 
-The model placed its motif slightly left of the requested center. We kept that
-placement on bare rock; did not move an ancestor mark. The image importer
-copied the generation directly into the required wall-v9.png output path.
-`finish_wall29.js` then extracted only pigment darker than the original rock
-within [890,742,1003,845], excluding model-redrawn surrounding stone. That
-bounded addition was composited onto the exact ancestor pixels. Feathered edges
-make the pigment sit on the rock. Every pixel outside the box is unchanged.
+Prompt: Add only one very small worn charcoal-and-red-ochre motif on bare upper
+left rock, centered near (345,175) in the 1254-pixel square: two curved parallel
+trails of tiny ochre pebbles bending back toward each other, a return path for a
+carefully reversible change. Hand-painted uneven earth pigments, stone visible.
+No arrowheads, letters, numbers, writing, logos, watermark, border or new hands.
 
-The final PNG replaced the generated output at the same path and was also
-saved as continuation wall.png. No draft picture, crop or contact sheet was
-saved in the workspace. The only new distinct pictures are the whole final wall
-and its required 512 px JPEG; the continuation PNG duplicates the final wall.
-
-The required PNG is 1254 × 1254 RGB. The JPEG uses the existing vendored encoder,
-512 px, quality 75. Both final pictures were opened. See VISUAL_REVIEW.md and
-image-checks29.json for the observed result, limits and exact bytes/hashes.
+The generated candidate placed the motif slightly farther left. After viewing,
+finish_wall31.js exported only darker new pigment within [245,130,390,225] onto
+the exact ancestor pixels, leaving all outside pixels unchanged. The original
+candidate was not retained as an extra image. Only the finished wall outputs and
+the required numbered JPEG are delivered. Visual results/limits are recorded
+in VISUAL_REVIEW.md and image-checks31.json.
