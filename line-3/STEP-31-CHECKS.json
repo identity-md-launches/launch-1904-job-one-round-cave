@@ -1,0 +1,133 @@
+{
+  "status": "passed",
+  "python": "3.14.4",
+  "local_checks_only": true,
+  "tests": {
+    "new_import_order": 10,
+    "inherited": 79,
+    "total_passed": 89,
+    "independent_graph_selection_cases": 4096,
+    "new_test_command": "python3 -B -m unittest discover -s line-3/tools/import-order -v",
+    "inherited_test_command_template": "python3 -B -m unittest discover -s test/scratch/inherited-regression/tools/<tool> -p 'test_*.py' -v"
+  },
+  "demo": {
+    "exit_code": 0,
+    "selected_modules": 6,
+    "groups": 5,
+    "waves": 4
+  },
+  "actual_worker_scan": {
+    "path": "shared/import-drift",
+    "exit_code": 0,
+    "modules": 24,
+    "edges": 39,
+    "waves": 4,
+    "warnings": 0
+  },
+  "delivery": {
+    "record_count": 31,
+    "new_record": "dist/line-3/31.json",
+    "png_dimensions": [
+      1254,
+      1254
+    ],
+    "jpeg_dimensions": [
+      512,
+      512
+    ],
+    "goal_byte_identical": true,
+    "older_records_unchanged": true,
+    "only_allowed_delivery_paths_changed": true,
+    "new_or_modified_nonartifact_files_below_100000_bytes": true,
+    "pngs_untracked_for_uploader": true,
+    "unmet_visual_requirements": []
+  },
+  "goal_sha256": "97a36f6c53a4bdaa53c398cbbddf0917cf6dafabae4d767234fa8412cc736643",
+  "files": [
+    {
+      "path": "dist/line-3/31.jpg",
+      "bytes": 69307,
+      "sha256": "eec97fe84289248cebd8efda7d442d634af91735ea9c6d7bce746a8e3ce6cfef"
+    },
+    {
+      "path": "dist/line-3/31.json",
+      "bytes": 707,
+      "sha256": "1d52a6e64a834e8b7cb1b2058ec8203658f59375a498fd90b663e05993fc374c"
+    },
+    {
+      "path": "line-3/README.md",
+      "bytes": 3223,
+      "sha256": "81a3cb9fe0c16f6dc32b772d1279607e96efb4211a200f6d2c1389f27563350d"
+    },
+    {
+      "path": "line-3/STEP-31-IMAGES.json",
+      "bytes": 1396,
+      "sha256": "1d39b9a77e017c6bbc53c5827f39da30a9c5359ed73017808575ac543da5834d"
+    },
+    {
+      "path": "line-3/STEP-31-REVIEW.md",
+      "bytes": 4650,
+      "sha256": "508860c25b71297ce1c99b5b0ba6fb97ec39c306e946d74b0c58efca7c8c824f"
+    },
+    {
+      "path": "line-3/USED.md",
+      "bytes": 10919,
+      "sha256": "c4eaefcd1d7cc14bedec05e519689487538c262e4a87b99b94d7eb6c3876dfdb"
+    },
+    {
+      "path": "line-3/tools/import-order/README.md",
+      "bytes": 6042,
+      "sha256": "133aae3618b67de400ec7059705ebf251889b2fb893ddbd3d733a2976230a2da"
+    },
+    {
+      "path": "line-3/tools/import-order/examples/cli.py",
+      "bytes": 202,
+      "sha256": "43540e1427a7acaa07eefde80b5be417a9b17304c11dc96ab2c5c8211cf494c3"
+    },
+    {
+      "path": "line-3/tools/import-order/examples/engine.py",
+      "bytes": 26,
+      "sha256": "95b8afcae00d4ca30f4ad2e6e8ef80122a0234c320d1f733f282f19ac0953095"
+    },
+    {
+      "path": "line-3/tools/import-order/examples/model.py",
+      "bytes": 29,
+      "sha256": "43e38ced196ec959d0afd95eaab8f5b5afd7b6ec2959782517c47ce960ebd543"
+    },
+    {
+      "path": "line-3/tools/import-order/examples/rules.py",
+      "bytes": 14,
+      "sha256": "dd16775119c2a6e92b11e066e44986782506839127dfbe500f347cbb5a1b8e54"
+    },
+    {
+      "path": "line-3/tools/import-order/examples/service.py",
+      "bytes": 29,
+      "sha256": "c0e841e337be837c2e4362a9cf91bba39e413c3152d75f12878e36d9d17febce"
+    },
+    {
+      "path": "line-3/tools/import-order/examples/spare.py",
+      "bytes": 49,
+      "sha256": "30ba988a20ea0caff6f2ccf5709b78fc7865180ba84e4ebe856d4966bd451cea"
+    },
+    {
+      "path": "line-3/tools/import-order/examples/storage.py",
+      "bytes": 13,
+      "sha256": "86fd157a5062fcf6fc946e0bb846437f43542521b02b0f32ed079db856e54d44"
+    },
+    {
+      "path": "line-3/tools/import-order/observed-source.json",
+      "bytes": 24346,
+      "sha256": "8c90cd9e54fce04b18a2a673cca25352f85cd822bd92936b42c9fdfe51731c27"
+    },
+    {
+      "path": "line-3/tools/import-order/order.py",
+      "bytes": 9197,
+      "sha256": "5da6840e8b60dcf296f2abc1367d1cf285523517122c22df2d0aaddf843f3df6"
+    },
+    {
+      "path": "line-3/tools/import-order/test_order.py",
+      "bytes": 10789,
+      "sha256": "dfaffa6db9db20c88b399b52520ee40bfaecf8c53e67275c5aa6c408e7e98bdb"
+    }
+  ]
+}

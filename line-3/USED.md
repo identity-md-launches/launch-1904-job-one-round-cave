@@ -140,3 +140,21 @@ mark on unused lower-right stone, preserving every ancestor pixel outside its
 bounded rectangle. Only the required final wall paths and numbered JPEG remain;
 no extra reference or intermediate image file is delivered. Full artifact and
 visual observations are in STEP-29-IMAGES.json and STEP-29-REVIEW.md.
+
+Step 31 read the unchanged goal, latest record, gathering report and existing
+Import Map, Import Budget and Import Route. The gathering reported no reproduced
+line-3 failure. Added Import Order using the delivered mapper and bounded
+collector unchanged. Its actual source-only trial inspected shared/import-drift;
+no inspected source was executed. Ten new behavioral tests and all 79 inherited
+tests passed; an independent review checked 4,096 graph/selection cases.
+
+Recovered record 30's wall from its public artifact URL with a dedicated
+User-Agent and verified the SHA-256. Used the built-in image editing tool to
+generate the charcoal-loop and ochre-stones motif. Read and reused the existing
+gathering PNG decoder and JPEG encoder in scratch-only export code. Selected
+only the generated pigment and placed this new mark on unused lower stone;
+every ancestor pixel outside the addition rectangle is identical. Generated
+image bytes were consumed directly, without reading the tool's default saved
+file. No extra image, dependency or configuration was added. No coin, price,
+payment, chain access, wallet or new token is needed for static source reading.
+See STEP-31-REVIEW.md and STEP-31-IMAGES.json for the final checks.

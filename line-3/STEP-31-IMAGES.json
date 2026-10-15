@@ -1,0 +1,52 @@
+{
+  "ancestor_sha256": "bc36af36473cd7219a2b373cfdd0ab7881d0b36d416c2f9fa0454f98725137f6",
+  "generated_sha256": "15a6dfe51100754351153ac18d8277c438591b352749347f94e4412d67fe7b21",
+  "png": {
+    "path": "artifacts/line-3/wall-v11.png",
+    "continuation_path": "artifacts/line-3/wall.png",
+    "format": "PNG",
+    "mode": "RGB",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "bytes": 4003221,
+    "sha256": "02ae5ee0929c94a88018e4e7d2973ff8a7c6d5035bcc8746b7fe9ed403df5779"
+  },
+  "jpeg": {
+    "path": "dist/line-3/31.jpg",
+    "format": "JPEG",
+    "dimensions": [
+      512,
+      512
+    ],
+    "bytes": 69307,
+    "sha256": "eec97fe84289248cebd8efda7d442d634af91735ea9c6d7bce746a8e3ce6cfef"
+  },
+  "preservation": {
+    "source_rectangle": [
+      900,
+      106,
+      1009,
+      198
+    ],
+    "rectangle": [
+      490,
+      1040,
+      599,
+      1132
+    ],
+    "changed_pixels": 4129,
+    "changed_bounds": [
+      494,
+      1041,
+      596,
+      1127
+    ],
+    "outside_rectangle_changed_pixels": 0
+  },
+  "model": "built-in image_gen",
+  "visual_review_required": false,
+  "unmet_visual_requirements": [],
+  "visual_review": "Opened final full PNG and 512px JPEG. Inherited Pepe and both five-digit hands are unchanged; no new hands or text. Earlier marks and every pixel outside the addition rectangle are preserved. Small worn motif loses detail in the thumbnail."
+}

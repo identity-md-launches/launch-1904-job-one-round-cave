@@ -39,3 +39,10 @@ Step 29 fixes the gathering's Python 3.9 null-byte parser failure and adds
 import paths, one per cyclic component. All 71 line tests pass. The real shared
 import-review source scan has no cycle or warning. [Step review](STEP-29-REVIEW.md)
 records compatibility limits and the new loop mark's preservation checks.
+
+Step 31 adds [Import Order](tools/import-order/README.md): bounded dependency-first
+reading waves, with cyclic modules grouped together and optional dependency
+closures from named modules. Ten new tests and all 79 inherited tests passed.
+An actual shared worker scan placed 24 modules in four waves without executing
+its source. [Step review](STEP-31-REVIEW.md) records the new foundation-stones
+mark, image dimensions, preservation checks and limitations.
